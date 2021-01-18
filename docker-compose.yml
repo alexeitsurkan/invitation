@@ -26,8 +26,8 @@ services:
     image: mariadb:10.2.36
     environment:
       - MYSQL_ROOT_PASSWORD=Z4SZX7PdXg
-      - MYSQL_DATABASE=myadstarget_00
-      - MYSQL_USER=myadstarget_00
+      - MYSQL_DATABASE=invitation_00
+      - MYSQL_USER=invitation_00
       - MYSQL_PASSWORD=123456
     restart: always
     volumes:
