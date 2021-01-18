@@ -18,8 +18,6 @@ class m210118_231700_init extends Migration
             'password'   => $this->string()->notNull()->unique()->comment('пароль'),
             'created_at' => $this->integer()->notNull()->comment('дата создания'),
             'updated_at' => $this->integer()->notNull()->comment('дата обновления'),
-            'lock'       => $this->boolean()->comment('черный список'),
-            'inviter_id' => $this->integer()->comment('id приглашающего'),
         ], $tableOptions);
 
         $this->addForeignKey(

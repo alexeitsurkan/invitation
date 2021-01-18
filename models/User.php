@@ -1,104 +1,119 @@
-<?php
+<?php namespace app\models;
 
-namespace app\models;
+use yii\db\ActiveRecord;
+use yii\web\IdentityInterface;
 
-class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
+/**
+ * класс пользователей системы
+ * Class User
+ * @package backend\modules\base\models\Auth
+ * @property integer $id
+ * @property integer $email
+ * @property integer $auth_key
+ * @property integer $password
+ * @property integer $created_at
+ * @property integer $updated_at
+ * @property boolean $lock
+ * @property boolean $inviter_id
+ */
+class User extends ActiveRecord implements IdentityInterface
 {
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
-
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
-
+    public static function tableName()
+    {
+        return '{{%user}}';
+    }
 
     /**
-     * {@inheritdoc}
+     * генерация ключа аутентификации
+     * @param bool $insert
+     * @return bool
+     * @throws \yii\base\Exception
+     */
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            $now = new \DateTime();
+            if ($this->isNewRecord) {
+                $this->auth_key = \Yii::$app->security->generateRandomString();
+                $this->created_at = $now->getTimestamp();
+            }
+            $this->updated_at = $now->getTimestamp();
+
+            return true;
+        }
+        return false;
+    }
+    /**
+     * поиск пользователя по id
+     * @param int|string $id
+     * @return User|IdentityInterface|null
      */
     public static function findIdentity($id)
     {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+        return static::findOne(['id' => $id]);
     }
 
     /**
-     * {@inheritdoc}
+     * @param mixed $token
+     * @param null $type
+     * @return User|IdentityInterface|null
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        foreach (self::$users as $user) {
-            if ($user['accessToken'] === $token) {
-                return new static($user);
-            }
-        }
-
-        return null;
+        return static::findOne(['auth_key' => $token]);
     }
 
     /**
-     * Finds user by username
-     *
-     * @param string $username
+     * Поиск по email
+     * @param string $email
      * @return static|null
      */
-    public static function findByUsername($username)
+    public static function findByEmail($email)
     {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
-
-        return null;
+        return static::findOne(['email' => $email]);
     }
-
     /**
-     * {@inheritdoc}
+     * возвращает id пользователя
+     * @return int|mixed|string
      */
     public function getId()
     {
-        return $this->id;
+        return $this->getPrimaryKey();
     }
 
     /**
-     * {@inheritdoc}
+     * получение  ключа
+     * @return mixed|string
      */
     public function getAuthKey()
     {
-        return $this->authKey;
+        return $this->auth_key;
     }
 
     /**
-     * {@inheritdoc}
+     * проверка  ключа на валидность
+     * @param string $authKey
+     * @return bool
      */
     public function validateAuthKey($authKey)
     {
-        return $this->authKey === $authKey;
+        return $this->getAuthKey() === $authKey;
+    }
+
+    //проверка пароля
+    public function validatePassword($password)
+    {
+        return \Yii::$app->security->validatePassword($password, $this->password);
     }
 
     /**
-     * Validates password
-     *
-     * @param string $password password to validate
-     * @return bool if password provided is valid for current user
+     * генерирует пароль
+     * @param $password
+     * @throws \yii\base\Exception
      */
-    public function validatePassword($password)
+    public function setPassword($password)
     {
-        return $this->password === $password;
+        $this->password = \Yii::$app->security->generatePasswordHash($password);
     }
 }
+
