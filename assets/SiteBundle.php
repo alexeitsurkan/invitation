@@ -16,4 +16,8 @@ class SiteBundle extends AppAsset
     public $js = [
         'js/index.js'
     ];
+
+    public $depends = [
+        FullPage::class,
+    ];
 }

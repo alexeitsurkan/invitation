@@ -1,8 +1,4 @@
 /*====================================================================*/
-.header {
-    /*background-image: linear-gradient(to right, #f5eded, #fcefff);*/
-}
-
 .header .card {
     height: 728px;
     width: 791px;
@@ -129,8 +125,9 @@
     background: #ce4563c2;
     border-radius: 5px;
     color: #fff;
-    padding: 0 41px;
-    font-size: 152px;
+    width: 200px;
+    height: 200px;
+    font-size: 130px;
     font-weight: bold;
 }
 
