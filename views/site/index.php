@@ -1,53 +1,73 @@
 <?php
 
-/* @var $this yii\web\View */
+use app\assets\SiteBundle;
 
-$this->title = 'My Yii Application';
+SiteBundle::register($this);
+$this->title = 'Свадьба Алексея и Марины';
 ?>
-<div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+<div class="block header">
+    <div class="card">
+        <div class="logo"></div>
+        <div class="faces">
+            <div class="face_img men"
+                 style="background-image: url(/img/alex.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+            <div class="face_img women"
+                 style="background-image: url(/img/marin.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+        </div>
+        <div class="info">
+            <div class="men">
+                <span>жених:</span>
+                <div class="fio">Цуркан Алексей Эдуардович</div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+            <div class="women">
+                <span>невеста:</span>
+                <div class="fio">Тяпкина Марина Сергеевна</div>
             </div>
         </div>
+    </div>
+</div>
 
+
+<div class="block inviting">
+    <div class="card">
+        <div class="content">
+            <div class="title">Приглашение <br/>на свадьбу!</div>
+            <p class="text">
+                <b>Дорогие друзья, уважаемые гости!</b><br/>
+                Мы хотим видеть Вас рядом , в самый долгожданный день нашей <br/> жизни,
+                который мы хотим разделить вместе с вами.
+                <br/>
+                Приглашаем Вас на нашу свадьбу,<br/>
+                которая состоится <br/>8.07.2017 в МО г.Химки ,Старбеево,ул.Свердлова д20 к3.<br/>
+
+                Встречаемся в <b>15:00</b> <br/>
+                Начало торжества в <b>16:00</b>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="block counter-block">
+    <div class="card">
+        <div class="title">До свадьбы осталось</div>
+        <div class="counter">
+            <div class="el">
+                <div class="day">12</div>
+                <div class="label">Дней</div>
+            </div>
+            <div class="el">
+                <div class="hour">12</div>
+                <div class="label">Часов</div>
+            </div>
+            <div class="el">
+                <div class="min">12</div>
+                <div class="label">Минут</div>
+            </div>
+            <div class="el">
+                <div class="sec">12</div>
+                <div class="label">Секунд</div>
+            </div>
+        </div>
     </div>
 </div>

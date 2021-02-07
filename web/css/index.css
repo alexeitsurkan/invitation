@@ -1,0 +1,143 @@
+/*====================================================================*/
+.header {
+    /*background-image: linear-gradient(to right, #f5eded, #fcefff);*/
+}
+
+.header .card {
+    height: 728px;
+    width: 791px;
+}
+
+.header .card .logo {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 30%;
+    width: 40%;
+    height: 40%;
+    background: url(/img/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.header .face_img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.header .faces .men {
+    margin-top: 65px;
+    margin-left: 457px;
+    box-shadow: 0 0 36px 5px #f2c5b3;
+    border: 14px solid #fbebe4;
+}
+
+.header .faces .women {
+    margin-top: 383px;
+    margin-left: 29px;
+    border: 14px solid #f4bec2;
+    box-shadow: 0 0 36px 5px #f2c5b3;
+}
+
+.header .info .men, .header .info .women {
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 116px;
+    text-align: end;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.header .info .fio {
+    color: #ce4563c2;
+}
+
+.header .info .women {
+    margin-top: 554px;
+    margin-left: 388px;
+    text-align: start;
+}
+
+/*===================================================================*/
+.inviting {
+    /*background: url(/img/fon2.jpg);*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*box-shadow: 0 -33px 63px #bba3ab;*/
+}
+
+.inviting .card {
+    height: 728px;
+    width: 791px;
+    background: url(../img/inviting-letter.png) no-repeat center;
+}
+
+.inviting .card .content {
+    position: absolute;
+    margin-left: 287px;
+    margin-top: 30px;
+    padding: 67px 30px;
+}
+
+.inviting .card .content .title {
+    font-size: 49px;
+    color: #ce4563c2;
+    font-weight: bold;
+    text-shadow: 0 0 #b99595;
+    text-align: center;
+    line-height: 89%;
+}
+
+.inviting .card .content .text {
+    font-size: 27px;
+    margin-top: 27px;
+}
+
+/*===================================================================*/
+
+.counter-block {
+    /*background: url(/img/fon3.jpg);*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*box-shadow: 0 33px 63px #bba3ab;*/
+}
+
+.counter-block .card {
+    height: 728px;
+    width: 975px;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 203px;
+}
+.counter-block .card .title{
+    font-size: 44px;
+    color: #ce4563c2;
+    font-weight: bold;
+
+}
+.counter .el {
+    display: inline-block;
+    padding: 14px;
+}
+
+.day, .hour, .min, .sec {
+    background: #ce4563c2;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0 41px;
+    font-size: 152px;
+    font-weight: bold;
+}
+
+.counter .label {
+    position: absolute;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -40px;
+}

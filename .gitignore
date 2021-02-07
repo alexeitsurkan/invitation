@@ -4,3 +4,4 @@ composer.phar
 composer.lock
 /web/assets
 
+/node_modules/
