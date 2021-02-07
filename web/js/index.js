@@ -5,7 +5,14 @@ $().ready(function () {
         //options here
         autoScrolling: true,
         scrollHorizontally: true,
-        navigation: true,
+        // navigation: true,
+        css3:false,
+        afterLoad: function(anchorLink, index){
+        },
+
+        onLeave: function(index, nextIndex, direction){
+
+        }
     });
 
     //счетчик до даты мероприятия

@@ -8,12 +8,7 @@ body {
     background: url(/img/mainfon.jpg);
 }
 
-.block{
-    height: 100%;
-    width: 100%;
-}
-
-.card{
+.content{
     position: relative;
     width: 80%;
     height: 100%;

@@ -1,10 +1,10 @@
 /*====================================================================*/
-.header .card {
+.header .content {
     height: 728px;
     width: 791px;
 }
 
-.header .card .logo {
+.header .content .logo {
     position: absolute;
     margin-left: 30%;
     margin-top: 30%;
@@ -66,20 +66,20 @@
     /*box-shadow: 0 -33px 63px #bba3ab;*/
 }
 
-.inviting .card {
+.inviting .content {
     height: 728px;
     width: 791px;
     background: url(../img/inviting-letter.png) no-repeat center;
 }
 
-.inviting .card .content {
+.inviting .content .letter {
     position: absolute;
     margin-left: 287px;
     margin-top: 30px;
     padding: 67px 30px;
 }
 
-.inviting .card .content .title {
+.inviting .content .letter .title {
     font-size: 49px;
     color: #ce4563c2;
     font-weight: bold;
@@ -88,9 +88,35 @@
     line-height: 89%;
 }
 
-.inviting .card .content .text {
+.inviting .content .letter .text {
     font-size: 27px;
     margin-top: 27px;
+}
+
+.inviting .control_button {
+    text-align: center;
+    font-size: 29px;
+}
+
+.inviting .success {
+    outline: none;
+    color: #27882f;
+    border: 1px solid #27882f;
+}
+
+.inviting .danger {
+    outline: none;
+    color: red;
+    border: 1px solid red;
+}
+
+/*===================================================================*/
+.inviting .preferences {
+    height: 728px;
+    width: 791px;
+    background: #fff;
+    margin: 0 auto;
+    font-size: 16px;
 }
 
 /*===================================================================*/
@@ -103,19 +129,20 @@
     /*box-shadow: 0 33px 63px #bba3ab;*/
 }
 
-.counter-block .card {
+.counter-block .content {
     height: 728px;
     width: 975px;
     font-size: 22px;
     text-align: center;
     padding-top: 203px;
 }
-.counter-block .card .title{
+
+.counter-block .content .title {
     font-size: 44px;
     color: #ce4563c2;
     font-weight: bold;
-
 }
+
 .counter .el {
     display: inline-block;
     padding: 14px;
@@ -137,4 +164,56 @@
     font-size: 22px;
     font-weight: bold;
     margin-top: -40px;
+}
+
+/*============================================================================*/
+.wish .content {
+    height: 728px;
+    width: 975px;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 43px;
+}
+
+.wish .title {
+    font-size: 44px;
+    color: #ce4563c2;
+    font-weight: bold;
+}
+
+.wish .form {
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: end;
+}
+.wish .form textarea{
+    width: 100%;
+    height: 100px;
+    border: 3px solid #d66f85;
+    resize: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 13px;
+}
+.wish .form button{
+    background: #da738a;
+    margin: 12px;
+    border-radius: 12px;
+    border: none;
+    padding: 4px 18px;
+    color: #fff;
+}
+
+.wish .history {
+    text-align: left;
+    padding: 12px;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.wish .history .title {
+    color: #d66f85;
 }
