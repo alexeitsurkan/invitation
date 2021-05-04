@@ -1,5 +1,8 @@
 <?php namespace app\controllers;
 
+use app\helpers\SiteHelper;
+use app\models\Entity\Person;
+use Yii;
 use yii\web\Controller;
 
 /**
@@ -26,6 +29,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $person = null;
+        $get = Yii::$app->request->get();
+
+        if (isset($get['key'])) {
+            $person = Person::findOne(['key' => $get['key']]);
+        }
+
+        return $this->render('index', [
+            'invitation' => SiteHelper::getInvitation($person)
+        ]);
     }
 }
