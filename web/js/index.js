@@ -1,6 +1,6 @@
 $().ready(function () {
 
-    //полножкранный скролл
+    //полноэкранный скролл
     $('#fullpage').fullpage({
         //options here
         autoScrolling: true,

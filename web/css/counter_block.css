@@ -1,0 +1,87 @@
+.counter-block .content {
+    font-size: 22px;
+    text-align: center;
+    height: 400px;
+}
+
+.counter-block .content .title {
+    font-size: 44px;
+    color: #ce4563c2;
+    font-weight: bold;
+}
+
+.counter .el {
+    display: inline-block;
+    padding: 14px;
+}
+
+.day, .hour, .min, .sec {
+    background: #ce4563c2;
+    border-radius: 5px;
+    color: #fff;
+    width: 200px;
+    height: 200px;
+    font-size: 130px;
+    font-weight: bold;
+}
+
+.counter .label {
+    position: absolute;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -40px;
+}
+
+@media (max-width: 1161px) {
+    .day, .hour, .min, .sec {
+        width: 150px;
+        height: 150px;
+        font-size: 90px;
+    }
+
+    .counter .label {
+        font-size: 18px;
+        margin-top: -46px;
+    }
+}
+
+@media (max-width: 911px) {
+    .counter-block .content {
+        height: 275px;
+    }
+    .counter .el {
+        padding: 3px;
+    }
+    .day, .hour, .min, .sec {
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+    }
+
+    .counter .label {
+        font-size: 15px;
+        margin-top: -37px;
+        margin-left: -12px;
+    }
+}
+@media (max-width: 550px) {
+
+    .counter-block .content .title {
+        font-size: 34px;
+    }
+    .counter-block .content .text {
+        font-size: 20px;
+    }
+    .day, .hour, .min, .sec {
+        width: 60px;
+        height: 60px;
+        font-size: 34px;
+    }
+
+    .counter .label {
+        font-size: 14px;
+        margin-top: -23px;
+        margin-left: -22px;
+    }
+}

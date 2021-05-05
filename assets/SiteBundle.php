@@ -10,7 +10,8 @@ class SiteBundle extends AppAsset
     public $baseUrl = '@web';
 
     public $css = [
-        'css/index.css'
+        'css/index.css',
+        'css/counter_block.css'
     ];
 
     public $js = [
