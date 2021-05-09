@@ -1,109 +1,63 @@
-/*====================================================================*/
-.header .content {
-    height: 728px;
-    width: 791px;
-}
 
-.header .content .logo {
+#kg {
     position: absolute;
-    margin-left: 30%;
-    margin-top: 30%;
-    width: 40%;
-    height: 40%;
-    background: url(/img/logo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 2;
+    left: 11%;
+    top: 3%;
+    width: 47%;
+    height: 94%;
+    background: url(/img/aleximarina.png) center/80% no-repeat;
 }
-@media (max-width: 810px) {
-    .header .content .logo {
-        margin-left: 32%;
-        margin-top: 41%;
-        width: 28%;
-        height: 28%;
-    }
-}
-@media (max-width: 650px) {
-    .header .content .logo {
-        margin-left: 30%;
-        margin-top: 40%;
-        width: 22%;
-        height: 22%;
-    }
-}
-/*====================================================================================*/
-.header .face_img {
+
+#lunaplane {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    top: 48%;
+    right: 22%;
+    width: 32%;
+    height: 47%;
+    background: url(/img/lunaplane.png) center/100% no-repeat;
 }
 
-
-.header .faces .men {
-    margin-top: 65px;
-    margin-left: 457px;
-    box-shadow: 0 0 36px 5px #077dff38;
-    border: 14px solid #e6f1ff;
-}
-
-.header .faces .women {
-    margin-top: 383px;
-    margin-left: 29px;
-    border: 14px solid #f4bec2;
-    box-shadow: 0 0 36px 5px #f2c5b3;
-}
-
-.header .info .men, .header .info .women {
+#date{
     position: absolute;
-    margin-top: 130px;
-    margin-left: 116px;
-    text-align: end;
-    font-size: 27px;
-    font-weight: bold;
+    top: 33%;
+    right: 18%;
+    font-size: 52px;
+    text-align: center;
+    color: #fff;
+    line-height: 78%;
 }
 
-.header .info .fio {
-    color: #ce4563c2;
+@media (max-width: 1250px) {
+    #date{
+        font-size: 42px;
+    }
 }
 
-.header .info .women {
-    margin-top: 554px;
-    margin-left: 388px;
-    text-align: start;
+@media (max-width: 1050px) {
+    #date{
+        font-size: 32px;
+    }
 }
 
-@media (max-width: 810px) {
-    .header .face_img {
-        width: 250px;
-        height: 250px;
-    }
-    .header .faces .men {
-        margin-top: 221px;
-        margin-left: 392px;
-        border: 9px solid #e6f1ff;
-    }
-    .header .faces .women {
-        margin-top: 433px;
-        margin-left: 113px;
-        border: 9px solid #f4bec2;
-    }
-
-    .header .info .men, .header .info .women {
-        margin-top: 262px;
-        margin-left: 91px;
+@media (max-width: 850px) {
+    #date{
+        top: 40%;
         font-size: 25px;
     }
+}
 
-    .header .info .women {
-        margin-top: 554px;
-        margin-left: 405px;
+@media (max-width: 550px) {
+    #date{
+        right: 10%;
+        top: 43%;
+        font-size: 18px;
     }
 }
-@media (max-width: 650px) {
-    .header .face_img {
-        width: 150px;
-        height: 150px;
+
+@media (max-width: 360px) {
+    #date{
+        right: 3%;
+        top: 55%;
+        font-size: 18px;
     }
 }

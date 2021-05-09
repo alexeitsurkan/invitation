@@ -15,6 +15,29 @@ $().ready(function () {
         }
     });
 
+    //принять приглашение
+    $('.inviting .btn').on('click',function () {
+        let val = $(this).val();
+        $.ajax({
+            url: 'site/to-accept-invitation',
+            type: 'get',
+            dataType: 'json',
+            data: {
+                val: val,
+                key: (new URL(location.href)).searchParams.get('key')
+            },
+            success: function (res) {
+                $('.inviting .title').hide();
+                $('.inviting .control').hide();
+                if(res && val == 1){
+                    $('.inviting .text').html('<span style="color: green">Спасибо что приняли наше приглашение!</span>');
+                }else if(res && val == 0){
+                    $('.inviting .text').html('<span style="color: red">Очень жаль что у вас не получится прийти</span>');
+                }
+            }
+        });
+    });
+
     //счетчик до даты мероприятия
     let dateEnd = new Date('2021', '07', '14', '18', '00');
     setInterval(function(){

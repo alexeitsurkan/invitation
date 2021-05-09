@@ -3,8 +3,9 @@
     min-width: 350px;
     height: auto;
     font-size: 27px;
+    max-width: 1000px;
     margin: 0 auto;
-    background: #ffffff6b;
+    background: #ffffffc9;
     padding: 35px;
 }
 
@@ -12,16 +13,19 @@
     position: absolute;
     width: 125px;
 }
+
 .ungle.lt {
     top: 4px;
     left: 4px;
     transform: rotate(-180deg);
 }
+
 .ungle.lb {
     bottom: 4px;
     left: 4px;
     transform: rotate(-270deg);
 }
+
 .ungle.rb {
     bottom: 4px;
     right: 4px;
@@ -68,6 +72,7 @@
 .inviting .control {
     text-align: center;
 }
+
 .inviting .control .btn {
     outline: none;
     border: none;
@@ -75,6 +80,7 @@
     margin: 0 32px;
     font-size: 31px;
 }
+
 .inviting .control .b-success {
     color: #86d08c;
 }
@@ -88,6 +94,7 @@
         font-size: 22px;
         padding: 30px;
     }
+
     .ungle {
         width: 100px;
     }
@@ -106,11 +113,14 @@
     .ungle {
         width: 75px;
     }
-    .inviting .content .title {
-        font-size: 35px;
-    }
+
     .inviting .content .text {
         padding: 20px;
+        padding-bottom: 0;
+    }
+
+    .inviting .content .title {
+        font-size: 35px;
     }
 }
 
@@ -122,11 +132,9 @@
     .ungle {
         width: 50px;
     }
+
     .inviting .content .title {
         font-size: 25px;
-    }
-    .inviting .content .text {
-        padding: 20px;
     }
 
     .inviting .control .btn {

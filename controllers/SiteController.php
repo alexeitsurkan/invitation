@@ -4,6 +4,7 @@ use app\helpers\SiteHelper;
 use app\models\Entity\Person;
 use Yii;
 use yii\web\Controller;
+use yii\web\Response;
 
 /**
  * Class SiteController
@@ -39,5 +40,27 @@ class SiteController extends Controller
         return $this->render('index', [
             'invitation' => SiteHelper::getInvitation($person)
         ]);
+    }
+
+    public function actionToAcceptInvitation()
+    {
+        \Yii::$app->response->format = Response::FORMAT_JSON;
+        $get = Yii::$app->request->get();
+
+        if ($get['key']) {
+            $p = Person::findOne(['key' => $get['key']]);
+            if ($p) {
+                switch ($get['val']) {
+                    case Person::STATUS_YES:
+                        $p->status = Person::STATUS_YES;
+                        break;
+                    case Person::STATUS_NO:
+                        $p->status = Person::STATUS_NO;
+                        break;
+                }
+                return $p->save();
+            }
+        }
+        return false;
     }
 }
