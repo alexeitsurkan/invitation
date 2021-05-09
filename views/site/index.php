@@ -35,11 +35,17 @@ $this->title = 'Свадьба Алексея и Марины';
     </div>
     <div class="section inviting">
         <div class="content">
-            <div class="letter">
-                <div class="title">Приглашение <br/>на свадьбу!</div>
-                <p class="text">
-                    <?= $invitation ?>
-                </p>
+            <img class="ungle lt" src="/img/ungle.png">
+            <img class="ungle lb" src="/img/ungle.png">
+            <img class="ungle rt" src="/img/ungle.png">
+            <img class="ungle rb" src="/img/ungle.png">
+            <div class="title">Приглашение на свадьбу!</div>
+            <p class="text">
+                <?= $invitation ?>
+            </p>
+            <div class="control">
+                <button type="submit" value="0" class="btn b-success">Принять</button>
+                <button type="submit" value="1" class="btn b-danger">Отказаться</button>
             </div>
         </div>
 
@@ -65,7 +71,8 @@ $this->title = 'Свадьба Алексея и Марины';
                     <div class="label">Секунд</div>
                 </div>
             </div>
-            <p class="text">Свадьба уже совсем скоро! Подготовка идет полным ходом. Каждую секунду происходит что-то новое. Отсчет
+            <p class="text">Свадьба уже совсем скоро! Подготовка идет полным ходом. Каждую секунду происходит что-то
+                новое. Отсчет
                 запущен. Поехали!</p>
         </div>
     </div>

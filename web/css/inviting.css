@@ -1,0 +1,136 @@
+.inviting .content {
+    position: relative;
+    min-width: 350px;
+    height: auto;
+    font-size: 27px;
+    margin: 0 auto;
+    background: #ffffff6b;
+    padding: 35px;
+}
+
+.ungle {
+    position: absolute;
+    width: 125px;
+}
+.ungle.lt {
+    top: 4px;
+    left: 4px;
+    transform: rotate(-180deg);
+}
+.ungle.lb {
+    bottom: 4px;
+    left: 4px;
+    transform: rotate(-270deg);
+}
+.ungle.rb {
+    bottom: 4px;
+    right: 4px;
+    transform: rotate(0deg);
+}
+
+.ungle.rt {
+    top: 4px;
+    right: 4px;
+    transform: rotate(-450deg);
+}
+
+.inviting .content .title {
+    font-size: 46px;
+    color: #ce4563c2;
+    font-weight: bold;
+    text-shadow: 0 0 #b99595;
+    text-align: center;
+    line-height: 89%;
+}
+
+.inviting .content .text {
+    padding: 40px;
+    text-align: center;
+}
+
+.inviting .control_button {
+    text-align: center;
+    font-size: 29px;
+}
+
+.inviting .success {
+    outline: none;
+    color: #27882f;
+    border: 1px solid #27882f;
+}
+
+.inviting .danger {
+    outline: none;
+    color: red;
+    border: 1px solid red;
+}
+
+.inviting .control {
+    text-align: center;
+}
+.inviting .control .btn {
+    outline: none;
+    border: none;
+    background: none;
+    margin: 0 32px;
+    font-size: 31px;
+}
+.inviting .control .b-success {
+    color: #86d08c;
+}
+
+.inviting .control .b-danger {
+    color: #d04247;
+}
+
+@media (max-width: 1000px) {
+    .inviting .content {
+        font-size: 22px;
+        padding: 30px;
+    }
+    .ungle {
+        width: 100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .inviting .content {
+        font-size: 20px;
+    }
+
+    .inviting .control .btn {
+        font-size: 22px;
+        margin: 0 25px;
+    }
+
+    .ungle {
+        width: 75px;
+    }
+    .inviting .content .title {
+        font-size: 35px;
+    }
+    .inviting .content .text {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .inviting .content {
+        font-size: 16px;
+    }
+
+    .ungle {
+        width: 50px;
+    }
+    .inviting .content .title {
+        font-size: 25px;
+    }
+    .inviting .content .text {
+        padding: 20px;
+    }
+
+    .inviting .control .btn {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+}

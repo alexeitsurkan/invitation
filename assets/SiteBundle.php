@@ -11,7 +11,8 @@ class SiteBundle extends AppAsset
 
     public $css = [
         'css/index.css',
-        'css/counter_block.css'
+        'css/counter_block.css',
+        'css/inviting.css'
     ];
 
     public $js = [
