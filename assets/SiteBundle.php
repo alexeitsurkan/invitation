@@ -15,7 +15,9 @@ class SiteBundle extends AssetBundle
         'css/site.css',
         'css/index.css',
         'css/counter_block.css',
-        'css/inviting.css'
+        'css/inviting.css',
+        'css/info.css',
+        'css/plan.css',
     ];
 
     public $js = [

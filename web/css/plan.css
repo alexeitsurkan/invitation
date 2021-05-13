@@ -1,0 +1,62 @@
+
+.plan h1 {
+    margin: 0;
+}
+
+.plan ul {
+    list-style: none;
+}
+
+.plan .list li {
+    display: table-row;
+}
+
+.plan .time {
+    color: #dc793c;
+    width: 80px;
+    height: 75px;
+    text-align: right;
+}
+
+.plan .time span {
+    display: block;
+    padding: 20px;
+}
+
+.plan .info, .plan .time, .plan .dot {
+    float: left;
+}
+
+.plan .info .place {
+    font-size: 16px;
+    color: #dc793c;
+}
+
+.plan .dot {
+    position: relative;
+    width: 99px;
+    height: 1px;
+}
+
+.plan .dot .dot-one, .plan .dot .dot-end {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 30px auto;
+    border-radius: 80px;
+    background: #9fddea;
+}
+
+.plan .dot-one:after {
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 80px;
+    background: #000000;
+    content: "";
+    top: 3px;
+    margin-left: 50%;
+    left: -1px;
+    z-index: -1;
+}

@@ -21,14 +21,10 @@ $this->title = 'Свадьба Алексея и Марины';
                     <div>ресторан Прага</div>
                 </div>
                 <div id="lunaplane">
-<!--                    <a id="btn-weekend" href="#section2">Weekend</a>-->
-<!--                    <a id="btn-travel" href="#section3">Travel</a>-->
-<!--                    <a id="btn-resort" href="#section4">Resort</a>-->
-<!--                    <a id="btn-registry" href="#section5">Registry</a>-->
                 </div>
             </div>
         </div>
-        <div class="section inviting">
+        <div class="section info-block inviting">
             <div class="content">
                 <img class="ungle lt" src="/img/ungle.png">
                 <img class="ungle lb" src="/img/ungle.png">
@@ -43,7 +39,79 @@ $this->title = 'Свадьба Алексея и Марины';
                     <button value="0" class="btn b-danger">Отказаться</button>
                 </div>
             </div>
+        </div>
+        <div class="section info-block plan">
+            <div id="parashut"></div>
+            <div class="content">
+                <div class="title">Что! Где и Когда!</div>
 
+                <h3>Суббота 14 августа</h3>
+                <ul class="list">
+                    <li>
+                        <div class="time"><span>11:00</span></div>
+                        <div class="dot">
+                            <div class="dot-one"></div>
+                        </div>
+                        <div class="info">
+                            <span class="title">Выкуп невесты</span>
+                            <div class="place">c. Ульма ул. Ленина 33</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time"><span>13:00</span></div>
+                        <div class="dot">
+                            <div class="dot-one"></div>
+                        </div>
+                        <div class="info">
+                            <span class="title">Welcome - фуршет</span>
+                            <div class="place">с. Вадатурково на озере</div></div>
+                    </li>
+                    <li>
+                        <div class="time"><span>13:30</span></div>
+                        <div class="dot">
+                            <div class="dot-one"></div>
+                        </div>
+                        <div class="info">
+                            <span class="title">Церемония бракосочетания</span>
+                            <div class="place">с. Вадатурково на озере</div></div>
+                    </li>
+                    <li>
+                        <div class="time"><span>17:00</span></div>
+                        <div class="dot">
+                            <div class="dot-one"></div>
+                        </div>
+                        <div class="info">
+                            <span class="title">Встреча гостей</span>
+                            <div class="place">г. Рыбница ресторан "Прага"</div></div>
+                    </li>
+                    <li>
+                        <div class="time"><span>18:00</span></div>
+                        <div class="dot">
+                            <div class="dot-one"></div>
+                        </div>
+                        <div class="info">
+                            <span class="title">Праздничный банкет</span>
+                            <div class="place">г. Рыбница ресторан "Прага"</div></div>
+                    </li>
+                    <li>
+                        <div class="time"><span>22:30</span></div>
+                        <div class="dot">
+                            <div class="dot-one"></div>
+                        </div>
+                        <div class="info">
+                            <span class="title">Сладкий торт</span></div>
+                    </li>
+                    <li>
+                        <div class="time"><span>23:00</span></div>
+                        <div class="dot">
+                            <div class="dot-end"></div>
+                        </div>
+                        <div class="info">
+                            <span class="title">Безудержные танцы!</span></div>
+                    </li>
+                </ul>
+
+            </div>
         </div>
         <div class="section counter-block">
             <div id="parashut"></div>

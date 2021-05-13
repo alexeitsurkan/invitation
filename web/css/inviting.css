@@ -1,53 +1,34 @@
-.inviting .content {
-    position: relative;
-    min-width: 350px;
-    height: auto;
-    font-size: 27px;
-    max-width: 1000px;
-    margin: 0 auto;
-    background: #ffffffc9;
-    padding: 35px;
-}
 
-.ungle {
+.inviting .ungle {
     position: absolute;
     width: 125px;
 }
 
-.ungle.lt {
+.inviting .ungle.lt {
     top: 4px;
     left: 4px;
     transform: rotate(-180deg);
 }
 
-.ungle.lb {
+.inviting .ungle.lb {
     bottom: 4px;
     left: 4px;
     transform: rotate(-270deg);
 }
 
-.ungle.rb {
+.inviting .ungle.rb {
     bottom: 4px;
     right: 4px;
     transform: rotate(0deg);
 }
 
-.ungle.rt {
+.inviting .ungle.rt {
     top: 4px;
     right: 4px;
     transform: rotate(-450deg);
 }
 
-.inviting .content .title {
-    font-size: 46px;
-    color: #ce4563c2;
-    font-weight: bold;
-    text-shadow: 0 0 #b99595;
-    text-align: center;
-    line-height: 89%;
-}
-
-.inviting .content .text {
+.inviting .text {
     padding: 40px;
     text-align: center;
 }
@@ -90,20 +71,12 @@
 }
 
 @media (max-width: 1000px) {
-    .inviting .content {
-        font-size: 22px;
-        padding: 30px;
-    }
-
     .ungle {
         width: 100px;
     }
 }
 
 @media (max-width: 800px) {
-    .inviting .content {
-        font-size: 20px;
-    }
 
     .inviting .control .btn {
         font-size: 22px;
@@ -114,27 +87,16 @@
         width: 75px;
     }
 
-    .inviting .content .text {
+    .inviting .text {
         padding: 20px;
         padding-bottom: 0;
-    }
-
-    .inviting .content .title {
-        font-size: 35px;
     }
 }
 
 @media (max-width: 600px) {
-    .inviting .content {
-        font-size: 16px;
-    }
 
     .ungle {
         width: 50px;
-    }
-
-    .inviting .content .title {
-        font-size: 25px;
     }
 
     .inviting .control .btn {
