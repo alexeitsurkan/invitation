@@ -12,7 +12,6 @@ use yii\web\Response;
  */
 class SiteController extends Controller
 {
-
     /**
      * @return array
      */
@@ -39,6 +38,14 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'invitation' => SiteHelper::getInvitation($person)
+        ]);
+    }
+
+    public function actionPersonData()
+    {
+        $model = Person::find()->all();
+        return $this->render('index', [
+            'model' => $model
         ]);
     }
 

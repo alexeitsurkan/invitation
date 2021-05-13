@@ -17,16 +17,16 @@
     background: url(/img/lunaplane.png) center/100% no-repeat;
 }
 
-#date{
+#date {
     position: absolute;
     top: 33%;
     right: 18%;
+    font-family: fangsong;
     font-size: 52px;
     text-align: center;
     color: #fff;
     line-height: 78%;
 }
-
 @media (max-width: 1250px) {
     #date{
         font-size: 42px;
@@ -41,15 +41,15 @@
 
 @media (max-width: 850px) {
     #date{
-        top: 40%;
+        top: 47%;
         font-size: 25px;
     }
 }
 
 @media (max-width: 550px) {
-    #date{
-        right: 10%;
-        top: 43%;
+    #date {
+        right: 6%;
+        top: 52%;
         font-size: 18px;
     }
 }
