@@ -20,7 +20,7 @@
 #date {
     position: absolute;
     top: 33%;
-    right: 18%;
+    right: 10%;
     font-family: fangsong;
     font-size: 52px;
     text-align: center;
@@ -41,7 +41,7 @@
 
 @media (max-width: 850px) {
     #date{
-        top: 47%;
+        top: 37%;
         font-size: 25px;
     }
 }

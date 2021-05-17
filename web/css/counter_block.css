@@ -33,14 +33,20 @@
     margin-top: -40px;
 }
 
-
-#parashut {
+.parashut {
     position: absolute;
     right: 2%;
     top: 3%;
     width: 16%;
     height: 49%;
     background: url(/img/parashut.png) center/80% no-repeat;
+    -webkit-animation: winter  10s infinite alternate;
+}
+
+@keyframes winter {
+    100% {
+        right: 10%;
+    }
 }
 
 

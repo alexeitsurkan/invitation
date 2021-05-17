@@ -1,35 +1,52 @@
 
+.plan .content {
+    background: #ffffffc9 url(/img/map.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .plan h1 {
     margin: 0;
 }
 
 .plan ul {
     list-style: none;
+    text-align: -webkit-center;
+    margin-top: 20px;
 }
 
 .plan .list li {
     display: table-row;
 }
 
+.plan .dt {
+    width: 215px;
+}
+
+.plan .date {
+    font-size: 21px;
+}
+
 .plan .time {
     color: #dc793c;
-    width: 80px;
-    height: 75px;
     text-align: right;
+    font-size: 40px;
 }
 
-.plan .time span {
-    display: block;
-    padding: 20px;
-}
-
-.plan .info, .plan .time, .plan .dot {
+.plan .info, .plan .dt, .plan .dot {
     float: left;
+}
+
+.plan .info {
+    text-align: left;
+    text-shadow: 0 0 3px white;
 }
 
 .plan .info .place {
     font-size: 16px;
-    color: #dc793c;
+    font-weight: bold;
+    color: #ec5a00;
 }
 
 .plan .dot {
@@ -43,7 +60,7 @@
     display: block;
     width: 20px;
     height: 20px;
-    margin: 30px auto;
+    margin: 20px auto;
     border-radius: 80px;
     background: #9fddea;
 }
@@ -52,11 +69,63 @@
     position: absolute;
     display: block;
     width: 2px;
-    height: 80px;
-    background: #000000;
+    height: 63px;
+    background: #9fddea;
     content: "";
     top: 3px;
     margin-left: 50%;
     left: -1px;
-    z-index: -1;
+    z-index: 0;
+}
+
+@media (max-width: 900px) {
+    .plan .time {
+        font-size: 30px;
+    }
+
+    .plan .dt {
+        width: 150px;
+    }
+
+    .plan .dot {
+        width: 70px;
+    }
+}
+
+@media (max-width: 700px) {
+    .plan .date {
+        display: none;
+    }
+
+    .plan .time {
+        font-size: 20px;
+    }
+
+    .plan .info .place {
+        font-size: 13px;
+    }
+
+    .plan .dt {
+        width: 50px;
+    }
+
+    .plan .dot {
+        width: 50px;
+    }
+
+    .plan .dot .dot-one, .plan .dot .dot-end {
+        width: 10px;
+        height: 10px;
+        margin: 11px auto;
+    }
+
+    .plan .dot-one:after {
+        height: 45px;
+    }
+}
+
+@media (max-width: 500px) {
+    .plan .info {
+        font-size: 13px;
+    }
 }
