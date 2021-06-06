@@ -29,9 +29,9 @@ $().ready(function () {
             success: function (res) {
                 $('.inviting .title').hide();
                 $('.inviting .control').hide();
-                if(res && val == 1){
+                if(res && val == yes){
                     $('.inviting .text').html('<span style="color: green">Спасибо что приняли наше приглашение!</span>');
-                }else if(res && val == 0){
+                }else if(res && val == no){
                     $('.inviting .text').html('<span style="color: red">Очень жаль что у вас не получится прийти</span>');
                 }
             }

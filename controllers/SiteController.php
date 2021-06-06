@@ -30,14 +30,17 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $person = null;
+        $person_status = false;
         $get = Yii::$app->request->get();
 
         if (isset($get['key'])) {
+            $person_status = true;
             $person = Person::findOne(['key' => $get['key']]);
         }
 
         return $this->render('index', [
-            'invitation' => SiteHelper::getInvitation($person)
+            'invitation' => SiteHelper::getInvitation($person),
+            'person_status' => $person_status
         ]);
     }
 

@@ -17,7 +17,7 @@ class Person extends ActiveRecord
 
     const STATUS_NULL = null;
     const STATUS_YES = 1;
-    const STATUS_NO = 0;
+    const STATUS_NO = 2;
 
     public function getInvitation()
     {

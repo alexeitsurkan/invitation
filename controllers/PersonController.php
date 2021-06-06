@@ -3,6 +3,7 @@
 use app\models\Entity\Person;
 use yii\data\ArrayDataProvider;
 use yii\web\Controller;
+use yii\web\HttpException;
 
 /**
  * Class PersonController
@@ -25,9 +26,15 @@ class PersonController extends Controller
 
     /**
      * @return string
+     * @throws HttpException
      */
     public function actionIndex()
     {
+        $get = \Yii::$app->request->get();
+
+        if(empty($get['key']) || $get['key']!=123)
+            throw new HttpException('404');
+
         $dataProvider = new ArrayDataProvider([
             'allModels' => Person::find()->all(),
 //            'sort' => [

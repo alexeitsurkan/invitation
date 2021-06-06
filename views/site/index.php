@@ -1,14 +1,22 @@
 <?php
 
 use app\assets\SiteBundle;
+use app\models\Entity\Person;
 
 /**
  * @var $invitation
+ * @var $person_status
  */
 
 SiteBundle::register($this);
 $this->title = 'Свадьба Алексея и Марины';
+
+$this->registerJs('
+    var yes = '.Person::STATUS_YES.';
+    var no = '.Person::STATUS_NO.';
+', yii\web\View::POS_END);
 ?>
+
 
 <div class="clouds"></div>
 
@@ -34,10 +42,12 @@ $this->title = 'Свадьба Алексея и Марины';
             <p class="text">
                 <?= $invitation ?>
             </p>
+            <?php if($person_status):?>
             <div class="control">
-                <button value="1" class="btn b-success">Принять</button>
-                <button value="0" class="btn b-danger">Отказаться</button>
+                <button value="<?= Person::STATUS_YES ?>" class="btn b-success">Принять</button>
+                <button value="<?= Person::STATUS_NO ?>" class="btn b-danger">Отказаться</button>
             </div>
+            <?php endif;?>
         </div>
     </div>
     <div class="section info-block plan">
