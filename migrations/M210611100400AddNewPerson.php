@@ -8,6 +8,8 @@ use app\models\Entity\Person;
 class M210611100400AddNewPerson extends \yii\db\Migration
 {
 
+    public $tableName = '{{%person}}';
+
     /**
      * @return bool|void
      * @throws \yii\base\Exception
