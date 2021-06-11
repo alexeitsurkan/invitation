@@ -2,6 +2,7 @@
 
 use app\models\Entity\Person;
 use yii\data\ArrayDataProvider;
+use yii\db\Query;
 use yii\web\Controller;
 use yii\web\HttpException;
 
@@ -35,18 +36,23 @@ class PersonController extends Controller
         if(empty($get['key']) || $get['key']!=123)
             throw new HttpException('404');
 
+        $model = Person::find()->all();
+        $count = (new Query())->select('SUM(count)')
+            ->from(Person::tableName())
+            ->where([
+                'status' => 1,
+            ])
+            ->one();
         $dataProvider = new ArrayDataProvider([
-            'allModels' => Person::find()->all(),
-//            'sort' => [
-//                'attributes' => ['id', 'username', 'email'],
-//            ],
+            'allModels' => $model,
             'pagination' => [
                 'pageSize' => 10,
             ],
         ]);
 
         return $this->render('index', [
-            'dataProvider' => $dataProvider
+            'dataProvider' => $dataProvider,
+            'count' => $count
         ]);
     }
 

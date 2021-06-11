@@ -5,6 +5,7 @@ use yii\helpers\Url;
 
 /**
  * @var $dataProvider
+ * @var $count
  */
 
 ?>
@@ -39,3 +40,6 @@ use yii\helpers\Url;
         ],
     ],
 ]); ?>
+<br>
+<br>
+<div>Прияняло приглашение: <?=$count?></div>
